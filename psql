@@ -1,0 +1,15 @@
+***Take Backup of the database from server***
+=> pg_dump postgresql://[username]:[password]@127.0.0.1:5432/[database_name] | gzip > $FILE_NAME
+
+***For Dump in tar file extension***
+=> pg_dump -F t postgresql://[username]:[password]@127.0.0.1:5432/[database_name] > a.tar
+
+***Download from server***
+=> scp -P [port_num] [username]@[ip]:[file_path] [localFile_Path]
+
+***For Windows Import***
+=> psql -U [username] -p 5432  -d [databaseName] -f [file-path]
+
+***For Linux Import***
+=> psql -h localhost -U [username] -d [databasename] -f [file-path]
+
